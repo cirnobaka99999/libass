@@ -521,7 +521,7 @@ find_font(ASS_FontSelector *priv, ASS_Library *library,
           int *index, char **postscript_name, int *uid, ASS_FontStream *stream,
           uint32_t code, bool *name_match)
 {
-    ASS_FontInfo req = {0};
+    ASS_FontInfo req = { .uid = 0 };
     ASS_FontInfo *selected = NULL;
 
     // do we actually have any fonts?
@@ -625,7 +625,7 @@ static char *select_font(ASS_FontSelector *priv, ASS_Library *library,
                          ASS_FontStream *stream, uint32_t code)
 {
     ASS_FontProvider *default_provider = priv->default_provider;
-    ASS_FontProviderMetaData meta = {0};
+    ASS_FontProviderMetaData meta = { .families = 0 };
     char *result = NULL;
     bool name_match = false;
 
