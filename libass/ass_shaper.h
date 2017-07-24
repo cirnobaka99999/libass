@@ -21,8 +21,8 @@
 
 typedef struct ass_shaper ASS_Shaper;
 
-// TODO: Изменить путь.
-#include <fribidi.h>
+// Изменил путь.
+#include "./../vendor/fribidi/lib/fribidi.h"
 #include "ass_render.h"
 
 void ass_shaper_info(ASS_Library *lib);
